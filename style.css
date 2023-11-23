@@ -1,0 +1,94 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Empêche le défilement */
+}
+body{
+
+    background-image: url('background.png'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 55%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-container::before,
+  .image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+  }
+  
+  .image-container::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), black);
+  }
+  
+  .image-container::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), black);
+  }
+
+  .fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+  }
+
+  .fade-in {
+      opacity: 1 !important;
+      transition: opacity 0.5s ease-in;
+  }
+
+  .custom-card {
+    background-color: #37013A; /* Violet foncé */
+    color: #FF007F; /* Rose */
+    border: 2px solid #000000; /* Noir */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: scale(1.05); /* Effet d'échelle au survol */
+}
+
+.card{
+  background-color: #37013A;
+  border-radius: 30%;
+  border-color: #000000;
+  
+}
+p{
+  color :aliceblue;
+}
+
+.card-title{
+  color : #ffffff;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <title>BrainBrand</title>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap);
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, to {
+        transform: translateZ(-2px) translateY(5px);
+      }
+
+      40% {
+        transform: rotateY(180deg) translateZ(-2px) translateY(-35px);
+      }
+
+      60% {
+        transform: translateZ(-2px) translateY(-25px);
+      }
+    }
+
+    h3 {
+      font-size: 3.5rem;
+      line-height: 80%;
+      transform: rotateX(0) rotateY(-25deg);
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      color: #b9dfff;
+      color: #fff;
+      font-family: "Zefani";
+      font-family: "Abril Fatface";
+      margin: 3rem auto;
+      position: relative;
+      padding: 2rem 0 2rem;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+        0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    .scroll-more {
+      color: white;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: 2rem;
+      margin: 0 auto;
+      font-size: 2rem;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      font-family: monospace;
+      pointer-events: none;
+      z-index: -1;
+      transform-origin: center;
+      -webkit-animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite,
+        fonts 5s linear infinite;
+      animation: bounce 3s cubic-bezier(0.37, 0, 0.21, 1.02) infinite,
+        fonts 5s linear infinite;
+    }
+
+    body {
+      background-image: url("background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      overflow-y: auto;
+      padding-bottom: 2rem;
+    }
+
+    .container {
+      margin-top: 2rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(45deg, black, transparent);
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+        0 6px 6px rgba(0, 0, 0, 0.23);
+      cursor: pointer;
+      height: 460px;
+      margin: 20px;
+      padding: 0 20px;
+      position: relative;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.025);
+      text-align: center;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      color: white;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card-body {
+      flex: none;
+    }
+
+    .card-title {
+      margin-top: 1rem;
+    }
+
+    .card-text {
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      h3 {
+        width: 500px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .card {
+        width: 270px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3>
+      <span>Check</span>
+      <span> the</span>
+      <span> rules</span>
+      <div class="scroll-more">↓</div>
+    </h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Carte 1 -->
+      <div class="col">
+        <div class="card">
+          <img
+            src="img/trier-par-ordre-numerique 1.png"
+            class="card-img-top"
+            alt="Card Image"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Choisir un Ordre</h2>
+            <p class="card-text">
+              Déterminez dans lequel les joueurs joueront.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Carte 2 -->
+      <div class="col">
+        <div class="card">
+          <img
+            src="img/contour-de-cube-de-des (1).png"
+            class="card-img-top"
+            alt="Card Image"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Lancer le dé</h2>
+            <p class="card-text">
+              à son tour, un joueur lance le dé et avance son pion du nombre
+              de cases indiqué..
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Carte 3-->
+      <div class="col">
+        <div class="card">
+          <img src="img/camemberts.png" class="card-img-top" alt="Card Image" />
+          <div class="card-body">
+            <h2 class="card-title">Catégorie</h2>
+            <p class="card-text">
+              Déterminez dans lequel les joueurs joueront.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Carte 4 -->
+      <div class="col">
+        <div class="card">
+          <img
+            src="question-signe-en-cercles.png"
+            class="card-img-top"
+            alt="Card Image"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Posez une question</h2>
+            <p class="card-text">
+              Si la réponse est correcte, le joueur avance et peut relancer le
+              dé. Sinon, son tour se termine.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 5 -->
+      <div class="col">
+        <div class="card">
+          <img
+            src="img/diagramme-circulaire.png"
+            class="card-img-top"
+            alt="Card Image"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Collecter Camemberts</h2>
+            <p class="card-text">
+              Déterminez dans lequel les joueurs joueront.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 6 -->
+      <div class="col">
+        <div class="card">
+          <img src="img/gagner.png" class="card-img-top" alt="Card Image" />
+          <div class="card-body">
+            <h2 class="card-title">Gagner la partie</h2>
+            <p class="card-text">
+              Collecter un camembert de chaque catégorie et gagner.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

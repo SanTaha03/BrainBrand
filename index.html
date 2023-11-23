@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>BrainBrand</title>
+</head>
+<body>
+<!-- Header avec l'image (lien vers la deuxième page) -->
+<header class="text-center mt-4">
+    <a href="rules.html" class="d-inline">
+        <img src="brainbc.png" class="img-fluid" alt="Brain Brand Logo">
+    </a>
+</header>
+
+
+   
+
+    <!-- Cartes pour chaque section de texte -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card fade-out" id="objectiveCard">
+                    <div class="card-body">
+                        <h4 class="card-title">Objective of the game:</h4>
+                        <p class="card-text">The objective of Trivial Pursuit is to collect a wedge of each color by correctly answering a question from each category. The first person to collect all the colors wins the game.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Ajoutez d'autres cartes pour les autres sections ici -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Game Rules</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Objective of the game:</h4>
+                    <p>The objective of Trivial Pursuit is to collect a wedge of each color by correctly answering a question from each category. The first person to collect all the colors wins the game.</p>
+                    
+                    <!-- Ajoutez d'autres sections ici -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#fadeImage").click(function(){
+                $(".fade-out").removeClass("fade-out").addClass("fade-in");
+            });
+        });
+    </script>
+</body>
+</html>
